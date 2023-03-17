@@ -4,8 +4,8 @@ SRCS := $(shell find . -type f -name '*.go')
 LDFLAGS := -ldflags="-s -w -X \"main.Version=$(VERSION)\" -extldflags \"-static\""
 
 default: $(SRCS)
-  go fmt 
-  go build $(LDFLAGS) 
+	go fmt 
+	go build $(LDFLAGS) 
 
 initmod: 
-  go mod init $(PROJ_NAME)
+	go mod init $(PROJ_NAME)
